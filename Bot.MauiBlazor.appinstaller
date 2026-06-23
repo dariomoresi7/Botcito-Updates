@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppInstaller
+    xmlns="http://microsoft.com"
+    Version="1.0.0.0"
+    Uri="https://TU_USUARIO.github.io/TU_REPOSITORIO/Bot.MauiBlazor.appinstaller">
+    
+    <MainPackage
+        Name="com.companyname.bot.mauiblazor"
+        Publisher="CN=dario"
+        Version="1.0.0.0"
+        Uri="https://github.com"
+        ProcessorArchitecture="x64"/>
+        
+    <UpdateSettings>
+        <OnLaunch HoursBetweenUpdateChecks="0" />
+    </UpdateSettings>
+</AppInstaller>
