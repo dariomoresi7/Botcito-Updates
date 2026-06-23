@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
-    xmlns="http://schemas.microsoft.com/appx/appinstaller/2018"
+    xmlns="http://schemas.microsoft.com/appx/appinstaller/2021"
     Version="1.0.0.0"
-    Uri="https://raw.githubusercontent.com/dariomoresi7/Botcito-Updates/refs/heads/main/Bot.MauiBlazor.appinstaller">
-    
+    Uri="https://raw.githubusercontent.com/dariomoresi7/Botcito-Updates/main/Bot.MauiBlazor.appinstaller">
+
     <MainPackage
         Name="Bot.MauiBlazor"
         Publisher="CN=dario"
         Version="1.0.0.0"
-        Uri="https://github.com"/>
-        
+        Uri="https://github.com/dariomoresi7/Botcito-Updates/releases/download/v1.0.0/Bot.MauiBlazor_1.0.0.0_x64.msix"/>
+
     <UpdateSettings>
         <OnLaunch HoursBetweenUpdateChecks="0" />
     </UpdateSettings>
+
 </AppInstaller>
