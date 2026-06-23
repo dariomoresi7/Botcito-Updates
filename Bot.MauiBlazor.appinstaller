@@ -2,7 +2,7 @@
 <AppInstaller
     xmlns="http://schemas.microsoft.com/appx/appinstaller/2018"
     Version="1.0.0.0"
-    Uri="https://github.io">
+    Uri="https://raw.githubusercontent.com/dariomoresi7/Botcito-Updates/refs/heads/main/Bot.MauiBlazor.appinstaller">
     
     <MainPackage
         Name="com.companyname.bot.mauiblazor"
