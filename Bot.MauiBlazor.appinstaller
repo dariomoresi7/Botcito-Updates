@@ -9,7 +9,6 @@
         Publisher="CN=dario"
         Version="1.0.0.0"
         ProcessorArchitecture="x64"
-	    ProcessorArchitecture="x64"
         Uri="https://github.com/dariomoresi7/Botcito-Updates/releases/download/v1.0.0/Bot.MauiBlazor_1.0.0.0_x64.msix" />
 
     <UpdateSettings>
