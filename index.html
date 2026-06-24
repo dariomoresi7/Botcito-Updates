@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise Deployment Portal - Bot.MauiBlazor</title>
+    <title>Enterprise Deployment Portal - Botcito</title>
     <style>
         :root {
             --bg-color: #0d1117;
@@ -39,9 +39,19 @@
             text-align: center;
         }
 
-        .logo {
-            font-size: 48px;
-            margin-bottom: 10px;
+        /* ESTILOS PARA EL NUEVO ICONO DE IMAGEN */
+        .logo-container {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 96px;
+            height: 96px;
+            object-fit: contain;
+            border-radius: 16px;
         }
 
         h1 {
@@ -134,9 +144,13 @@
 <body>
 
     <div class="container">
-        <div class="logo">🤖</div>
-        <h1>Bot.MauiBlazor Deployment</h1>
-        <div class="version">Build v1.0.0.0 (Stable)</div>
+        <!-- SECCIÓN MODIFICADA: REEMPLAZO DE EMOJI POR IMAGEN -->
+        <div class="logo-container">
+            <img src="assets/image/botcito.png" alt="Botcito Logo" class="logo-img">
+        </div>
+        
+        <h1>Botcito Deployment</h1>
+        <div class="version">Build v1.0.0 (Stable)</div>
 
         <div class="steps">
             <div class="step-item">
@@ -162,3 +176,4 @@
 
 </body>
 </html>
+
