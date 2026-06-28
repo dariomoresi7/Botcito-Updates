@@ -9,7 +9,7 @@
         :root {
             --bg-color: #0d1117;
             --card-bg: #161b22;
-            --text-color: #c9d1d9;
+            --text-color: #e6edf3;
             --text-muted: #8b949e;
             --primary: #238636;
             --primary-hover: #2ea043;
@@ -17,6 +17,9 @@
             --secondary-hover: #30363d;
             --accent: #58a6ff;
             --border-color: #30363d;
+            --warning-bg: rgba(210, 153, 34, 0.1);
+            --warning-border: rgba(210, 153, 34, 0.4);
+            --warning-text: #e3b341;
         }
 
         body {
@@ -24,7 +27,7 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             margin: 0;
-            padding: 40px 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -33,175 +36,152 @@
         }
 
         .container {
-            max-width: 600px;
-            width: 90%;
+            max-width: 520px;
+            width: 100%;
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.6);
             text-align: center;
         }
 
-        .logo-container {
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
         .logo-img {
-            width: 96px;
-            height: 96px;
+            width: 88px;
+            height: 88px;
             object-fit: contain;
-            border-radius: 16px;
+            border-radius: 20px;
+            margin-bottom: 12px;
         }
 
         h1 {
-            font-size: 26px;
-            margin: 0 0 10px 0;
+            font-size: 28px;
+            margin: 0 0 4px 0;
             color: #fff;
+            font-weight: 700;
             letter-spacing: -0.5px;
         }
 
         .version {
             display: inline-block;
-            background-color: rgba(88, 166, 255, 0.15);
+            background-color: rgba(88, 166, 255, 0.1);
             color: var(--accent);
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 13px;
             font-weight: 600;
-            margin-bottom: 30px;
+            margin-bottom: 28px;
         }
 
-        .steps {
+        /* Bloque de pasos ultra-simplificado */
+        .quick-guide {
             text-align: left;
-            margin-bottom: 25px;
-            background-color: rgba(0, 0, 0, 0.2);
-            padding: 20px 25px;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent);
+            margin-bottom: 24px;
+            background-color: rgba(0, 0, 0, 0.15);
+            padding: 16px 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
         }
 
-        .step-item {
-            margin-bottom: 15px;
-            line-height: 1.6;
-            font-size: 15px;
+        .guide-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
         }
 
-        .step-item:last-child {
+        .guide-step:last-child {
             margin-bottom: 0;
         }
 
-        .step-number {
-            font-weight: bold;
-            color: var(--accent);
-            margin-right: 5px;
+        .step-icon {
+            font-size: 16px;
+            margin-right: 12px;
+            margin-top: 2px;
+            flex-shrink: 0;
         }
 
-        .button-group {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
+        /* Botón Principal Gigante para Acción Rápida */
+        .btn-main {
+            display: block;
+            background-color: var(--primary);
             color: #fff;
             text-decoration: none;
-            padding: 14px 28px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 6px;
+            padding: 18px 24px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 8px;
             transition: background-color 0.2s, transform 0.1s;
-            cursor: pointer;
-            border: 1px solid transparent;
-            box-sizing: border-box;
+            box-shadow: 0 4px 16px rgba(35, 134, 54, 0.4);
+            margin-bottom: 16px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            text-align: center;
         }
 
-        .btn-primary {
-            background-color: var(--primary);
-            box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3);
-        }
-
-        .btn-primary:hover {
+        .btn-main:hover {
             background-color: var(--primary-hover);
             transform: translateY(-1px);
         }
 
-        .btn-secondary {
-            background-color: var(--secondary);
-            border-color: var(--border-color);
-            color: var(--text-color);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--secondary-hover);
-            transform: translateY(-1px);
-        }
-
-        .btn:active {
+        .btn-main:active {
             transform: translateY(1px);
         }
 
-        /* Bloque de FAQ optimizado a nivel Staff */
-        .troubleshooting {
+        /* Cartel preventivo de compatibilidad visible inmediatamente */
+        .compat-alert {
+            background-color: var(--warning-bg);
+            border: 1px solid var(--warning-border);
+            border-radius: 8px;
+            padding: 14px 16px;
             text-align: left;
-            background-color: rgba(0, 0, 0, 0.1);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            margin-bottom: 25px;
-        }
-
-        summary {
-            padding: 12px 15px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            user-select: none;
-            color: #fff;
-        }
-
-        summary:hover {
-            color: var(--accent);
-        }
-
-        .faq-content {
-            padding: 0 15px 15px 15px;
+            margin-bottom: 24px;
             font-size: 13px;
             line-height: 1.5;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border-color);
-            padding-top: 12px;
+            color: var(--warning-text);
         }
 
-        .faq-content ol {
+        .compat-alert strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        .compat-alert ol {
             margin: 8px 0 0 0;
-            padding-left: 20px;
+            padding-left: 18px;
+            color: var(--text-color);
         }
 
-        .faq-content li {
-            margin-bottom: 6px;
+        .compat-alert li {
+            margin-bottom: 4px;
+        }
+
+        .btn-support {
+            display: inline-block;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+            background-color: var(--secondary);
+            border: 1px solid var(--border-color);
+            transition: background-color 0.2s;
+            margin-bottom: 24px;
+        }
+
+        .btn-support:hover {
+            background-color: var(--secondary-hover);
         }
 
         .footer {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--text-muted);
-            line-height: 1.5;
-        }
-
-        code {
-            background-color: rgba(255,255,255,0.1);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-            color: #ff7b72;
-            font-size: 14px;
+            line-height: 1.6;
+            border-top: 1px solid var(--border-color);
+            padding-top: 16px;
         }
     </style>
 </head>
@@ -212,46 +192,43 @@
             <img src="assets/images/botcito.png" alt="Botcito Logo" class="logo-img">
         </div>
         
-        <h1>Botcito Deployment</h1>
+        <h1>Botcito</h1>
         <div class="version">Build v1.0.0 (Stable)</div>
 
-        <div class="steps">
-            <div class="step-item">
-                <span class="step-number">1.</span> Click the button below to download the setup file (<code>BotcitoSetup.exe</code>).
+        <!-- Pasos rápidos e intuitivos -->
+        <div class="quick-guide">
+            <div class="guide-step">
+                <span class="step-icon">📥</span>
+                <span>Click the button below to get <strong>BotcitoSetup.exe</strong>.</span>
             </div>
-            <div class="step-item">
-                <span class="step-number">2.</span> Open the downloaded file. When Windows asks for permission (the blue administrator screen), just click <strong>"Yes"</strong> to let the installer safely set up the Bot.
+            <div class="guide-step">
+                <span class="step-icon">🛡️</span>
+                <span>Run the installer. If Windows prompts for permissions, click <strong>"Yes"</strong>.</span>
             </div>
         </div>
 
-        <div class="button-group">
-            <!-- MEJORA: Atributo download añadido para forzar descarga limpia sin bloqueos de pestañas -->
-            <a href="https://mega.nz/file/k5oAha4R#jy0oPl1_x2C1zhY1AA2jsDrMKLqSFuCefuZ0PnJBpgg" download="BotcitoSetup.exe" class="btn btn-primary">
-                Download Standalone Installer
-            </a>
-            
-            <!-- MEJORA: Botón secundario para mitigar el rebote de soporte de usuarios varados -->
-            <a href="https://discord.gg" target="_blank" class="btn btn-secondary">
-                Get Technical Support
-            </a>
+        <!-- Botón de Acción Dominante -->
+        <a href="https://mega.nz/file/k5oAha4R#jy0oPl1_x2C1zhY1AA2jsDrMKLqSFuCefuZ0PnJBpgg" download="BotcitoSetup.exe" class="btn-main">
+            Download Installer
+        </a>
+
+        <!-- Alerta de compatibilidad abierta por defecto para mitigar errores -->
+        <div class="compat-alert">
+            <strong>⚠️ Windows Requirement Notice</strong>
+            This software requires Windows 11 or Windows 10 (Version 1903 / Build 18362 or higher). If you get an compatibility error:
+            <ol>
+                <li>Open your Start Menu and type <strong>"Windows Update"</strong>.</li>
+                <li>Click <strong>Check for updates</strong> and install all pending items.</li>
+                <li>Restart your PC and run the installer again.</li>
+            </ol>
         </div>
 
-        <!-- MEJORA: Documentación defensiva para absorber problemas comunes de Windows Update -->
-        <details class="troubleshooting">
-            <summary>Facing an "Incompatible Operating System" error?</summary>
-            <div class="faq-content">
-                This installer requires Windows 10 Build 18362 (Version 1903) or higher. If your deployment gets blocked, please update your operating system:
-                <ol>
-                    <li>Open your Start Menu and go to <strong>Settings</strong> (⚙️).</li>
-                    <li>Navigate to <strong>Update & Security</strong> &gt; <strong>Windows Update</strong>.</li>
-                    <li>Click <strong>"Check for updates"</strong>, install all pending features, and restart your PC.</li>
-                    <li>Alternatively, download the official <em>Windows 10 Update Assistant</em> tool directly from Microsoft's website to force the upgrade.</li>
-                </ol>
-            </div>
-        </details>
+        <a href="https://discord.gg" target="_blank" class="btn-support">
+            💬 Need help? Join Support Discord
+        </a>
 
         <div class="footer">
-            <strong>System Requirements:</strong> Compatible exclusively with Windows 11 or Windows 10 (Version 1903 / Build 18362 or higher). Administrative permissions are automatically managed via the application manifest. All subsequent updates are synchronized invisibly on application startup.
+            <strong>System Deployment Note:</strong> Admin rights are requested on launch via manifest. Updates deployment is synchronized invisibly on startup using native background routines.
         </div>
     </div>
 
