@@ -17,8 +17,8 @@
             --secondary-hover: #30363d;
             --accent: #58a6ff;
             --border-color: #30363d;
-            --warning-bg: rgba(210, 153, 34, 0.1);
-            --warning-border: rgba(210, 153, 34, 0.4);
+            --warning-bg: rgba(210, 153, 34, 0.08);
+            --warning-border: rgba(210, 153, 34, 0.35);
             --warning-text: #e3b341;
         }
 
@@ -36,7 +36,7 @@
         }
 
         .container {
-            max-width: 520px;
+            max-width: 540px;
             width: 100%;
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -44,6 +44,12 @@
             padding: 32px;
             box-shadow: 0 12px 32px rgba(0,0,0,0.6);
             text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .logo-img {
@@ -73,7 +79,6 @@
             margin-bottom: 28px;
         }
 
-        /* Bloque de pasos ultra-simplificado */
         .quick-guide {
             text-align: left;
             margin-bottom: 24px;
@@ -85,7 +90,7 @@
 
         .guide-step {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             margin-bottom: 12px;
             font-size: 14px;
             line-height: 1.5;
@@ -98,11 +103,11 @@
         .step-icon {
             font-size: 16px;
             margin-right: 12px;
-            margin-top: 2px;
             flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
         }
 
-        /* Botón Principal Gigante para Acción Rápida */
         .btn-main {
             display: block;
             background-color: var(--primary);
@@ -128,34 +133,92 @@
             transform: translateY(1px);
         }
 
-        /* Cartel preventivo de compatibilidad visible inmediatamente */
         .compat-alert {
             background-color: var(--warning-bg);
             border: 1px solid var(--warning-border);
-            border-radius: 8px;
-            padding: 14px 16px;
+            border-radius: 12px;
+            padding: 18px;
             text-align: left;
             margin-bottom: 24px;
             font-size: 13px;
             line-height: 1.5;
-            color: var(--warning-text);
         }
 
-        .compat-alert strong {
+        .alert-title {
             color: #fff;
             display: block;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
             font-size: 14px;
+            font-weight: 700;
         }
 
-        .compat-alert ol {
-            margin: 8px 0 0 0;
-            padding-left: 18px;
+        .compat-desc {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        /* Estilos UX para las opciones de solución */
+        .solution-card {
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .solution-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .solution-badge {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-recommended {
+            background-color: rgba(35, 134, 54, 0.2);
+            color: #56d364;
+            border: 1px solid rgba(35, 134, 54, 0.4);
+        }
+
+        .badge-alternative {
+            background-color: rgba(88, 166, 255, 0.1);
+            color: var(--accent);
+            border: 1px solid rgba(88, 166, 255, 0.2);
+        }
+
+        .solution-text {
             color: var(--text-color);
+            display: block;
+            margin-bottom: 10px;
+            font-size: 13px;
+            line-height: 1.4;
         }
 
-        .compat-alert li {
-            margin-bottom: 4px;
+        .btn-inline {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--secondary);
+            border: 1px solid var(--border-color);
+            color: #fff;
+            text-decoration: none;
+            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-inline:hover {
+            background-color: var(--secondary-hover);
+            border-color: var(--text-muted);
         }
 
         .btn-support {
@@ -195,7 +258,6 @@
         <h1>Botcito</h1>
         <div class="version">Build v1.0.0 (Stable)</div>
 
-        <!-- Pasos rápidos e intuitivos -->
         <div class="quick-guide">
             <div class="guide-step">
                 <span class="step-icon">📥</span>
@@ -207,20 +269,28 @@
             </div>
         </div>
 
-        <!-- Botón de Acción Dominante -->
         <a href="https://mega.nz/file/k5oAha4R#jy0oPl1_x2C1zhY1AA2jsDrMKLqSFuCefuZ0PnJBpgg" download="BotcitoSetup.exe" class="btn-main">
             Download Installer
         </a>
 
-        <!-- Alerta de compatibilidad abierta por defecto para mitigar errores -->
+        <!-- Alerta de Requerimientos Rediseñada para Máxima Eficiencia de Soporte -->
         <div class="compat-alert">
-            <strong>⚠️ Windows Requirement Notice</strong>
-            This software requires Windows 11 or Windows 10 (Version 1903 / Build 18362 or higher). If you get an compatibility error:
-            <ol>
-                <li>Open your Start Menu and type <strong>"Windows Update"</strong>.</li>
-                <li>Click <strong>Check for updates</strong> and install all pending items.</li>
-                <li>Restart your PC and run the installer again.</li>
-            </ol>
+            <span class="alert-title">⚠️ Windows Compatibility Requirement</span>
+            <span class="compat-desc">This software requires Windows 11 or Windows 10 (Version 1903 / Build 18362 or higher). If your installation is blocked, choose one option to update:</span>
+            
+            <!-- OPCIÓN 1 CORREGIDA: Explicación de UX adaptada y URL de navegación completa -->
+            <div class="solution-card">
+                <span class="solution-badge badge-recommended">Option 1: Fast & Safe (Recommended)</span>
+                <span class="solution-text">Go to Microsoft's official page and click the blue <strong>"Update now"</strong> button to get the Update Assistant. It bypasses Windows Update glitches and upgrades your system safely.</span>
+                <a href="https://www.microsoft.com/software-download/windows10" target="_blank" class="btn-inline">
+                    🌐 Visit Windows 10 Update Page on Microsoft
+                </a>
+            </div>
+
+            <div class="solution-card">
+                <span class="solution-badge badge-alternative">Option 2: Manual Update</span>
+                <span class="solution-text">Go to your Start Menu, open <strong>Settings</strong> (⚙️) &gt; <strong>Update & Security</strong>, click <strong>Check for updates</strong>, and install all pending features.</span>
+            </div>
         </div>
 
         <a href="https://discord.gg" target="_blank" class="btn-support">
@@ -228,7 +298,7 @@
         </a>
 
         <div class="footer">
-            <strong>System Deployment Note:</strong> Admin rights are requested on launch via manifest. Updates deployment is synchronized invisibly on startup using native background routines.
+            <strong>Botcito</strong> • © 2026 Botcito. All rights reserved.
         </div>
     </div>
 
